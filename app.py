@@ -142,7 +142,7 @@ with Implementasi:
         count_vectorizer.fit(data['Content'])
 
         # Transform abstrak pengguna dengan count_vectorizer
-        user_tf = count_vectorizer.transform([preprocessed_abstract])
+        user_tf = count_vectorizer.transform([preprocessed_content])
        
         if lda_model is None:
             lda_model = LatentDirichletAllocation(n_components=topik, doc_topic_prior=0.2, topic_word_prior=0.1, random_state=42, max_iter=1)
