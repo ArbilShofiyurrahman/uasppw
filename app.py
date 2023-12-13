@@ -132,11 +132,11 @@ with Implementasi:
 
     st.subheader("Implementasi")
     st.write("Masukkan Content yang Ingin Dianalisis:")
-    user_abstract = st.text_area("Content", "")
+    user_content = st.text_area("Content", "")
 
     if user_content:
         # Preproses content
-        preprocessed_content = preprocess_text(user_abstract)
+        preprocessed_content = preprocess_text(user_content)
 
         # Fit vocabulary dengan data latih
         count_vectorizer.fit(data['Content'])
