@@ -7,7 +7,6 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.feature_extraction.text import CountVectorizer
 
 Data, lda, Model, Implementasi = st.tabs(['Data', 'LDA', 'Modelling', 'Implementasi'])
@@ -64,16 +63,10 @@ with Model:
     model1 = RandomForestClassifier(n_estimators=100, random_state=42)
     model1.fit(X_train, y_train)
    
-    # model2 = MultinomialNB()
-    # # Pelatihan model Naive Bayes dengan data pelatihan
-    # model2.fit(X_train, y_train)
+    model2 = MultinomialNB()
+    # Pelatihan model Naive Bayes dengan data pelatihan
+    model2.fit(X_train, y_train)
 
-    # Inisialisasi model KNN dengan n_neighbors=5
-    model_2 = KNeighborsClassifier(n_neighbors=5)
-
-    # Pelatihan model KNN dengan data pelatihan
-    model_2.fit(X_train, y_train)
-   
     model3 = DecisionTreeClassifier()
     # Pelatihan model Decision Tree dengan data pelatihan
     model3.fit(X_train, y_train)
