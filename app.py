@@ -16,7 +16,7 @@ with Data:
    st.text("Arbil Shofiyurrahman - 210411100016")
    st.subheader("Deskripsi Data")
    st.write("Fitur Fitur yang ada diantaranya:")
-   st.text("1) NIM\n2) Judul\n3) Abstrak\n4) Program Studi\n5) Penulis\n6) Dosen Pembimbing 1\n7) Dosen Pembimbing 2\n8) Label")
+   st.text("1) Judul\n2) Isi\n3) Label")
    st.subheader("Data")
    data = pd.read_csv("berita.csv")
    st.write(data)
